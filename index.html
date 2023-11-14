@@ -1,44 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <h1>Formulário</h1>
 <body>
-    <div>
+  <form id="frmAluno">
+    <div class="pai">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome"/>
+        <input type="text" id="nome" name="nome" placeholder="Ex: João Silva">
     </div> <br>
-    <div>
+   
+    <div class="pai1">
         <label for="idade">Idade:</label>
-        <input type="number" id="idade"/>
+        <input type="number" class="idade" name="idade" placeholder="Ex: 25" oninput="validaIdade(this)">
     </div> <br>
-    <div>
+    <div class="pai2">
         <label for="email">E-mail:</label>
-        <input type="email" id="email">
+        <input type="email" class="email" name="email" placeholder="Ex: joaozinhoperigoso@gmail.com">
     </div> <br>
-    <div>
+    <div class="tabela-genero">
         <label for="genero">Gênero</label>
-        <input type="radio" name="selecao" id="masculino">Masculino
-        <input type="radio" name="selecao" id="feminino">Feminino
-        <input type="radio" name="selecao" id="outros">Outros
+        <input type="radio" name="selecao" value="masculino">Masculino
+        <input type="radio" name="selecao" value="feminino">Feminino
+        <input type="radio" name="selecao" value="outros">Outros
  
     </div> <br>
 
-    <div>
-        <label for="comentario">Comentários:</label><br>
-        <textarea style="resize: vertical;"></textarea>
+    <div class="pai3">
+        <label for="comentario"><b>Comentários:</label><br>
+        <textarea style="resize: vertical;width:450px;height:75px" size="100" name="comentario"></textarea>
     </div> <br>
 
-    
+</form>
 
 
-    <div>
-        <label for="enviar"></label>
-        <input type="button" value="Enviar">
+    <div class="pai4">
+        <label class='envio' for="enviar"></label>
+        <input type="submit" value="Enviar" style="font-weight: bold;" id="enviar" onclick="enviar()">
+        <button id="botao">Salvar</button>
+
+
     </div>
 
+    <table></table>
+
+    <script src="./javascript.js" defer></script>
     </body>
 </html>
